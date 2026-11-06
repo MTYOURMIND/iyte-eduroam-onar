@@ -14,7 +14,8 @@ Bu araç bozuk profili temizler, doğru profili yeniden ekler ve bağlanmayı de
 
 ## Nasıl kullanılır?
 
-1. Sağ üstteki **Code → Download ZIP** ile indirin (veya **Releases** bölümünden).
+1. Sağdaki **Releases** bölümünden en son sürümün **`IYTE-Eduroam-Onar.zip`** dosyasını indirin.
+   *(Alternatif: **Code → Download ZIP**.)*
 2. ZIP'e **sağ tık → Tümünü ayıkla** ile bir klasöre çıkarın. *(ZIP'in içinden doğrudan çalıştırmayın.)*
 3. **`Eduroam-Onar.bat`** dosyasına **çift tıklayın.**
    > `IYTE-Eduroam-Onar.ps1` dosyasına çift tıklamayın: Windows `.ps1` dosyalarını çalıştırmaz, Not Defteri'nde açar. `.bat` dosyası onu sizin için doğru şekilde başlatır.
@@ -26,6 +27,16 @@ Arayüz istemezseniz konsol modu: `Eduroam-Onar.bat /quick`
 
 **SmartScreen uyarısı çıkarsa** ("Windows bilgisayarınızı korudu"): *Ek bilgi → Yine de çalıştır*. İnternetten indirilen imzasız betiklerde bu normaldir. Kodun tamamı açık, çalıştırmadan önce okuyabilirsiniz.
 **Çalışmazsa:** ZIP'e sağ tık → Özellikler → en altta **Engellemeyi kaldır**'ı işaretleyin, sonra ZIP'i çıkarın.
+
+### İndirmeyi doğrulama (isteğe bağlı)
+
+Release açıklamasında ZIP'in **SHA-256** özeti yazar. İndirdiğiniz dosyanın değişmediğini şöyle kontrol edebilirsiniz:
+
+```powershell
+Get-FileHash .\IYTE-Eduroam-Onar.zip -Algorithm SHA256
+```
+
+Çıkan değer release açıklamasındakiyle birebir aynı olmalı. Farklıysa dosyayı çalıştırmayın. **Aracı yalnızca bu repodan indirin.** "İYTE eduroam aracı" adıyla başka yerlerde dolaşan kopyalar değiştirilmiş olabilir.
 
 ## Nasıl çalışır?
 
